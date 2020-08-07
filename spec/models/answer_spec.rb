@@ -6,3 +6,4 @@ RSpec.describe Answer, type: :model do
   it { should have_db_index :question_id }
 end
 
+dddd
