@@ -1,7 +1,17 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+Question.destroy_all
+
+questions = Question.create!([
+                                 { title: 'KDE2 BSD patching issue.',
+                                   body: 'How to patch KDE2 under BSD?' },
+                                 { title: 'The Ultimate Question of Life, the Universe, and Everything',
+                                   body: "Actually I don't know the question itself. After 7.5mln years of calculation. Just give me a random answer. Please." }
+                             ])
+
+answers = Answer.create!([
+                             { question: questions[0],
+                               body: 'Ask in anime channel' },
+                             { question: questions[1],
+                               body: '42' },
+                             { question: questions[1],
+                               body: 'The answer is forty two' }
+                         ])

@@ -1,0 +1,10 @@
+h1 Questions
+ul
+  - @questions.each do |q|
+    li
+      h2
+        = link_to q.title, q
+      p
+        = q.body
+p
+  = link_to 'new question', new_question_path

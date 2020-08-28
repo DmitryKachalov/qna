@@ -1,0 +1,15 @@
+h2
+  = @question.title
+p
+  = @question.body
+div
+  ol
+    - @question.answers.each do |answer|
+      li
+        = answer.body
+p
+  = link_to 'edit question', edit_question_path(@question)
+p
+  = link_to 'delete question', question_path(@question), method: :delete
+div
+  = link_to 'all questions', questions_path

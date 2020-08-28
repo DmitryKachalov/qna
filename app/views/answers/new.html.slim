@@ -1,0 +1,10 @@
+h1 Question
+h2
+  = @question.title
+p
+  = @question.body
+h1 New answer
+div
+  = render 'answers/form'
+div
+  = link_to 'all questions', questions_path
